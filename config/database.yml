@@ -17,7 +17,7 @@ development:
   username: matt
   password:
 
-test:
+test: &test
   adapter: postgresql
   encoding: unicode
   database: rails-test
@@ -40,3 +40,6 @@ production:
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
+
+cucumber:
+  <<: *test
